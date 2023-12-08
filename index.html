@@ -11,26 +11,109 @@
     <!-- 1. Написать функцию, которая принимает 2 числа и возвращает -1, если первое меньше, чем второе; 1 – если первое
     больше, чем второе; и 0 – если числа равны. -->
 
+    <!-- <script>
+        function compareNumbers(a, b) {
+            if (a < b) {
+                return -1;
+            } else if (a > b) {
+                return 1;
+            } else {
+                return 0;
+            }
+        }
+        const a = 1;
+        const b = 2;
+
+        const result = compareNumbers(a, b);
+
+        console.log(result); 
+    </script> -->
 
 
     <!-- 2. Написать функцию, которая вычисляет факториал переданного ей числа. -->
 
+    <!-- <script>
+        function factorial(n) {
+            if (n === 0) {
+                return 1;
+            } else {
+                return n * factorial(n - 1);
+            }
+        }
+        const n = 5;
 
+        const result = factorial(n);
+
+        console.log(result); 
+    </script> -->
 
     <!-- 3. Написать функцию, которая принимает три отдельные
     цифры и превращает их в одно число. Например: цифры
     1, 4, 9 превратятся в число 149. -->
 
+    <!-- <script>
+        function threeDigitsToNumber(a, b, c) {
+            return a * 100 + b * 10 + c;
+        }
+        const a = 1;
+        const b = 4;
+        const c = 9;
+
+        const result = threeDigitsToNumber(a, b, c);
+
+        console.log(result); 
+
+    </script> -->
 
 
     <!-- 4. Написать функцию, которая принимает длину и ширину
     прямоугольника и вычисляет его площадь. Если в функцию
     передали 1 параметр, то она вычисляет площадь квадрата. -->
+    <!-- <script>
+        function calculateArea(length, width) {
+            if (arguments.length === 1) {
+                width = length;
+            }
+
+            return length * width;
+        }
+        const result1 = calculateArea(10, 20);
+
+        console.log(result1);
+
+        const result2 = calculateArea(10);
+
+        console.log(result2); 
+    </script> -->
 
 
 
     <!-- 5. Написать функцию, которая проверяет, является ли переданное ей число совершенным. Совершенное число – это
-    число, равное сумме всех своих собственных делителей. -->
+    число, равное сумме всех своих собственных делителей. -->\
+    <script>
+        function isPerfectNumber(n) {
+            if (n === 1) {
+                return false;
+            }
+
+            let sum = 1;
+
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) {
+                    sum += i + n / i;
+                }
+            }
+
+            return sum === n;
+        }
+        const result1 = isPerfectNumber(6);
+
+        console.log(result1); 
+
+        const result2 = isPerfectNumber(15);
+
+        console.log(result2); 
+    </script>
 
 
 
@@ -67,7 +150,7 @@
     обратно в «чч:мм:сс». -->
 
 
-    
+
 </body>
 
 </html>
